@@ -30,3 +30,10 @@ it seems that we need always manually restart the chrome container, otherwise th
 the data extracted are only saved in the container, and will be deleted when the container is deleted
 
 this entire process can probably be simplified using docker compose
+# docker compose up
+in the dockerfile, there are two commented lines, which should ensure there is enought time for the chrome to start before the scraping starts
+with one command, the entire code can be run as
+```
+docker-compose up --build
+```
+or without the --build if all images are built already.
