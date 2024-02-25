@@ -1,21 +1,3 @@
-#version: '3'
-#services:
-#  selenium-hub:
-#    image: selenium/standalone-chrome:latest
-#    ports:
-#      - "4444:4444"
-#
-#  soupscrape:
-#    build: .
-#    depends_on:
-#      - selenium-hub
-#    environment:
-#      - SELENIUM_HOST=http://selenium-hub:4444/wd/hub
-#    command: ["python3", "soupscraper.py"]
-
-# the above code did not work, but for some reason the code below works fine
-# in the code above, the script was not able to connect to the chrome
-
 version: '3'
 services:
   selenium:
